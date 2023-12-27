@@ -1,9 +1,11 @@
-import Image from "next/image";
-
-export default function Home() {
+const page = () => {
   return (
     <main>
-      <h1>Hello From Next.js</h1>
+      <div className="nav">
+        <p className="nav-name">rudr</p>
+      </div>
     </main>
   );
-}
+};
+
+export default page;
