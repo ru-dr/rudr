@@ -15,9 +15,15 @@ body {
   padding: 0;
 }
 
-.nav{
-  margin: 4rem;
+main {
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.nav {
+  padding: 4rem;
   font-family: var(--font-family-syne);
   font-weight: 600;
   font-size: 2rem;
+  display: inline-block;
 }
