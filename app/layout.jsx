@@ -1,13 +1,14 @@
-import { Inter } from "next/font/google";
-import { Syne } from "next/font/google";
-import { Advent_Pro } from "next/font/google";
 import "./globals.css";
+import { Inter, Syne } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 const syne = Syne({
   subsets: ["latin"],
-  variants: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-display-syne",
+  variable: "--font-syne",
 });
 
 export const metadata = {
@@ -18,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${syne.className}`}>{children}</body>
+      <body className={`${inter.variable} ${syne.variable}`}>{children}</body>
     </html>
   );
 }
