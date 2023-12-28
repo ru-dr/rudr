@@ -7,6 +7,7 @@ const Page = () => {
     left: 0,
     width: 0,
     height: 0,
+    top: 0,
   });
 
   const handleIndicator = (e) => {
@@ -14,7 +15,11 @@ const Page = () => {
       left: e.target.offsetLeft,
       width: e.target.offsetWidth,
       height: e.target.offsetHeight,
+      top: e.target.offsetTop,
     });
+
+    // print the current target and its position vertically and horizontally in the console
+    console.log(e.target, e.target.offsetTop, e.target.offsetLeft);
   };
 
   const firstElementRef = useRef(null);
@@ -25,6 +30,7 @@ const Page = () => {
         left: firstElementRef.current.offsetLeft,
         width: firstElementRef.current.offsetWidth,
         height: firstElementRef.current.offsetHeight,
+        top: firstElementRef.current.offsetTop,
       });
     }
   }, []);
@@ -61,6 +67,7 @@ const Page = () => {
                 left: indicatorStyle.left + "px",
                 width: indicatorStyle.width + "px",
                 height: indicatorStyle.height + "px",
+                top: indicatorStyle.top + "px",
               }}
             ></div>
           </nav>

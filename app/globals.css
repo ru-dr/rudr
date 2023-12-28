@@ -62,7 +62,6 @@ main {
 .indicator {
   position: absolute;
   background-color: #f0f2f840;
-  top: 66px;
   transition: left 0.3s ease, width 0.3s ease;
   border-radius: 5rem;
   animation: fadeIn 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -86,10 +85,6 @@ main {
     top: 0;
     flex-direction: column;
     padding: 1rem;
-  }
-
-  .indicator {
-    top: 86px;
   }
 
   .mail-btn {
