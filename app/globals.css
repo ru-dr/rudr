@@ -26,8 +26,7 @@ main {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
 }
 
 .nav-txt {
@@ -62,11 +61,11 @@ main {
 
 .indicator {
   position: absolute;
-  background-color: #f0f2f835;
+  background-color: #f0f2f840;
   top: 66px;
   transition: left 0.3s ease, width 0.3s ease;
   border-radius: 5rem;
-  animation: fadeIn 10s ease;
+  animation: fadeIn 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   padding: 0.2rem 1rem;
   z-index: -10;
 }
@@ -77,5 +76,23 @@ main {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* ================== Media Queries ================== */
+
+@media screen and (max-width: 768px) {
+  .nav {
+    top: 0;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .indicator {
+    top: 86px;
+  }
+
+  .mail-btn {
+    display: none;
   }
 }
