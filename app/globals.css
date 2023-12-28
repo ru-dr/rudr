@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --backgroud-color: #090909;
+  --backgroud-color: #090c10;
   --main-text-color: #fff;
 }
 
@@ -45,7 +45,7 @@ main {
 .main-nav {
   font-family: var(--font-inter);
   font-weight: 300;
-  border: 1px solid #fff;
+  border: 2px solid #21262d;
   padding: 0.5rem 0.7rem;
   border-radius: 5rem;
 }
@@ -62,8 +62,20 @@ main {
 
 .indicator {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #8a949e;
   top: 66px;
   transition: left 0.3s ease, width 0.3s ease;
   border-radius: 5rem;
+  animation: fadeIn 10s ease;
+  padding: 0.2rem 1rem;
+  z-index: -10;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

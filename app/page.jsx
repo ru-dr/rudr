@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 const Page = () => {
@@ -10,13 +10,24 @@ const Page = () => {
   });
 
   const handleIndicator = (e) => {
-    console.log(e.target.offsetLeft, e.target.offsetWidth);
     setIndicatorStyle({
       left: e.target.offsetLeft,
       width: e.target.offsetWidth,
       height: e.target.offsetHeight,
     });
   };
+
+  const firstElementRef = useRef(null);
+
+  useEffect(() => {
+    if (firstElementRef.current) {
+      setIndicatorStyle({
+        left: firstElementRef.current.offsetLeft,
+        width: firstElementRef.current.offsetWidth,
+        height: firstElementRef.current.offsetHeight,
+      });
+    }
+  }, []);
 
   return (
     <main>
@@ -27,7 +38,11 @@ const Page = () => {
         <div>
           <nav className="main-nav">
             <ul className="nav-ele">
-              <li className="elements" onClick={(e) => handleIndicator(e)}>
+              <li
+                className="elements"
+                onClick={(e) => handleIndicator(e)}
+                ref={firstElementRef}
+              >
                 All
               </li>
               <li className="elements" onClick={(e) => handleIndicator(e)}>
