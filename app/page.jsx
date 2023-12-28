@@ -6,12 +6,15 @@ const Page = () => {
   const [indicatorStyle, setIndicatorStyle] = useState({
     left: 0,
     width: 0,
+    height: 0,
   });
 
   const handleIndicator = (e) => {
+    console.log(e.target.offsetLeft, e.target.offsetWidth);
     setIndicatorStyle({
       left: e.target.offsetLeft,
       width: e.target.offsetWidth,
+      height: e.target.offsetHeight,
     });
   };
 
@@ -42,6 +45,7 @@ const Page = () => {
               style={{
                 left: indicatorStyle.left + "px",
                 width: indicatorStyle.width + "px",
+                height: indicatorStyle.height + "px",
               }}
             ></div>
           </nav>
