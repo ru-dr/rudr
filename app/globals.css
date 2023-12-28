@@ -62,7 +62,7 @@ main {
 
 .indicator {
   position: absolute;
-  background-color: #8a949e;
+  background-color: #f0f2f835;
   top: 66px;
   transition: left 0.3s ease, width 0.3s ease;
   border-radius: 5rem;
