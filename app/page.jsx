@@ -17,9 +17,6 @@ const Page = () => {
       height: e.target.offsetHeight,
       top: e.target.offsetTop,
     });
-
-    // print the current target and its position vertically and horizontally in the console
-    console.log(e.target, e.target.offsetTop, e.target.offsetLeft);
   };
 
   const firstElementRef = useRef(null);
