@@ -1,9 +1,19 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
-const page = () => {
-  const [highlighted, setHighlighted] = useState("All");
+const Page = () => {
+  const [indicatorStyle, setIndicatorStyle] = useState({
+    left: 0,
+    width: 0,
+  });
+
+  const handleIndicator = (e) => {
+    setIndicatorStyle({
+      left: e.target.offsetLeft,
+      width: e.target.offsetWidth,
+    });
+  };
 
   return (
     <main>
@@ -14,47 +24,26 @@ const page = () => {
         <div>
           <nav className="main-nav">
             <ul className="nav-ele">
-              <li
-                className={`${
-                  highlighted === "All" ? "highlighted" : ""
-                } elements`}
-                onClick={() => {
-                  setHighlighted("All");
-                }}
-              >
+              <li className="elements" onClick={(e) => handleIndicator(e)}>
                 All
               </li>
-              <li
-                className={`${
-                  highlighted === "About" ? "highlighted" : ""
-                } elements`}
-                onClick={() => {
-                  setHighlighted("About");
-                }}
-              >
+              <li className="elements" onClick={(e) => handleIndicator(e)}>
                 About
               </li>
-              <li
-                className={`${
-                  highlighted === "Projects" ? "highlighted" : ""
-                } elements`}
-                onClick={() => {
-                  setHighlighted("Projects");
-                }}
-              >
+              <li className="elements" onClick={(e) => handleIndicator(e)}>
                 Projects
               </li>
-              <li
-                className={`${
-                  highlighted === "Go-To" ? "highlighted" : ""
-                } elements`}
-                onClick={() => {
-                  setHighlighted("Go-To");
-                }}
-              >
-                Go-To
+              <li className="elements" onClick={(e) => handleIndicator(e)}>
+                Picks
               </li>
             </ul>
+            <div
+              className="indicator"
+              style={{
+                left: indicatorStyle.left + "px",
+                width: indicatorStyle.width + "px",
+              }}
+            ></div>
           </nav>
         </div>
         <div>
@@ -67,4 +56,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
