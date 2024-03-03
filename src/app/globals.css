@@ -31,3 +31,72 @@ body {
     text-wrap: balance;
   }
 }
+
+.anim-gradient {
+  background: linear-gradient(
+    45deg,
+    #ffadad,
+    #ffd6a5,
+    #fdffb6,
+    #caffbf,
+    #9bf6ff,
+    #a0c4ff,
+    #bdb2ff,
+    #ffc6ff
+  );
+  background-size: 1000% 1000%;
+  -webkit-animation: rangeen 10s ease infinite;
+  -moz-animation: rangeen 10s ease infinite;
+  -o-animation: rangeen 10s ease infinite;
+  animation: rangeen 10s ease infinite;
+}
+
+@-webkit-keyframes rangeen {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 81%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+@-moz-keyframes rangeen {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 81%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+@-o-keyframes rangeen {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 81%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+@keyframes rangeen {
+  0% {
+    background-position: 0% 20%;
+  }
+  50% {
+    background-position: 100% 81%;
+  }
+  100% {
+    background-position: 0% 20%;
+  }
+}
+
+/* hide scroll bar */
+::-webkit-scrollbar {
+  display: none;
+}
