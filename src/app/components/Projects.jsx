@@ -15,7 +15,7 @@ const projectData = [
     title: "Soter",
     desc: "Open Source SOS API for everyone.",
     image:
-      "https://ucarecdn.com/abce1b47-463d-43de-aa5b-df01c3be4c80/-/format/auto/-/quality/best/",
+      "https://ucarecdn.com/fc0291f1-2479-4bd7-97b6-916a55b1ecac/-/format/auto/-/quality/best/",
     url: "https://yatrazen.vercel.app/",
     status: "In Progress",
     statusColor: "bg-yellow-300",
