@@ -43,7 +43,7 @@ const Socials = () => {
             href={social.url}
             key={social.name}
             target="_blank"
-            className="flex items-center justify-center md:gap-x-8 gap-x-5 bg-[#1c1c1c] sm:py-5 py-3 px-14 rounded-full transition-all duration-500 hover:bg-[#2c2c2c]"
+            className="flex items-center justify-center md:gap-x-8 gap-x-2 bg-[#1c1c1c] sm:py-5 py-3 px-14 rounded-full transition-all duration-500 hover:bg-[#2c2c2c]"
           >
             <div className="sm:h-7 h-5 aspect-square relative">
               <Image src={social.logo} alt={social.name} fill={true} />

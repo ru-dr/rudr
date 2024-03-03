@@ -8,7 +8,7 @@ import Socials from "./components/Socials";
 export default function Home() {
 
   return (
-    <main className="p-8 flex gap-y-5 flex-col">
+    <main className="sm:p-8 p-5 flex gap-y-5 flex-col">
       <Navbar />
       <Hero />
       <Socials />
