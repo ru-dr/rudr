@@ -45,10 +45,10 @@ body {
     #ffc6ff
   );
   background-size: 1000% 1000%;
-  -webkit-animation: rangeen 10s ease infinite;
-  -moz-animation: rangeen 10s ease infinite;
-  -o-animation: rangeen 10s ease infinite;
-  animation: rangeen 10s ease infinite;
+  -webkit-animation: rangeen 8s ease infinite;
+  -moz-animation: rangeen 8s ease infinite;
+  -o-animation: rangeen 8s ease infinite;
+  animation: rangeen 8s ease infinite;
 }
 
 @-webkit-keyframes rangeen {
@@ -56,7 +56,7 @@ body {
     background-position: 0% 20%;
   }
   50% {
-    background-position: 100% 81%;
+    background-position: 100% 0%;
   }
   100% {
     background-position: 0% 20%;
@@ -67,7 +67,7 @@ body {
     background-position: 0% 20%;
   }
   50% {
-    background-position: 100% 81%;
+    background-position: 100% 0%;
   }
   100% {
     background-position: 0% 20%;
@@ -78,7 +78,7 @@ body {
     background-position: 0% 20%;
   }
   50% {
-    background-position: 100% 81%;
+    background-position: 100% 0%;
   }
   100% {
     background-position: 0% 20%;
@@ -89,7 +89,7 @@ body {
     background-position: 0% 20%;
   }
   50% {
-    background-position: 100% 81%;
+    background-position: 100% 0%;
   }
   100% {
     background-position: 0% 20%;

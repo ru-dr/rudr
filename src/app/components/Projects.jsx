@@ -32,10 +32,18 @@ const Projects = () => {
         >
           <div className="flex justify-between items-center sm:px-8 px-6 sm:py-6 py-4">
             <div className="flex sm:gap-y-2 gap-y-1 flex-col">
-              <p className="lg:text-4xl text-xl font-semibold">{project.title}</p>
-              <p className="lg:text-2xl text-sm font-light opacity-70">{project.desc}</p>
+              <p className="lg:text-4xl text-xl font-semibold">
+                {project.title}
+              </p>
+              <p className="lg:text-2xl text-sm font-light opacity-70">
+                {project.desc}
+              </p>
               <div className="flex items-center flex-row-reverse justify-end">
-              <div className={`animate-ping  h-2 w-2 rounded-full mx-3 ${project.statusColor || "bg-white"}`}></div>
+                <div
+                  className={`animate-ping  h-2 w-2 rounded-full mx-3 ${
+                    project.statusColor || "bg-white"
+                  }`}
+                ></div>
                 <p className="lg:text-xl text-sm font-light opacity-50">
                   {project.status}
                 </p>
@@ -45,13 +53,13 @@ const Projects = () => {
             <Link
               href={project.url}
               target="_blank"
-              className="transition-all ease-in-out duration-300 relative aspect-square rotate-45 sm:h-10 h-5  hover:rotate-0"
+              className="transition-all ease-in-out duration-300 relative aspect-square rotate-45 sm:h-8 h-4  hover:rotate-0"
             >
               <Image
                 src="/assets/Arrow.svg"
                 alt="Link"
                 fill
-                className="w-full h-full"
+                className="w-full h-full "
               />
             </Link>
           </div>
