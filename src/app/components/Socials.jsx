@@ -15,7 +15,7 @@ const socialInfo = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/",
-    logo: "/assets/LinkedIn.svg",
+    logo: "/assets/Linkedin.svg",
   },
   {
     name: "Twitter",
