@@ -6,16 +6,19 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Socials from "./components/Socials";
 import Lenis from '@studio-freight/lenis'
+import { useEffect } from 'react'
 
 export default function Home() {
-  const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis()
 
-  function raf(time) {
-    lenis.raf(time)
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
     requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
+  }, [])
 
   return (
     <main className="sm:p-8 p-5 flex gap-y-5 flex-col">
